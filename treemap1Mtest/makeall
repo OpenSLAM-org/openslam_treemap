@@ -1,0 +1,10 @@
+#/usr/bin/sh
+mkdir -p build/Debug
+cd build/Debug
+cmake -DCMAKE_BUILD_TYPE=Debug ../..
+make
+cd ../..
+mkdir -p build/Release
+cd build/Release
+cmake -DCMAKE_BUILD_TYPE=Release ../..
+make

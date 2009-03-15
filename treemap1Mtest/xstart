@@ -1,0 +1,6 @@
+#!/bin/sh
+mydir=`dirname $0`
+LD_LIBRARY_PATH="$mydir/../lib/" ; export LD_LIBRARY_PATH
+#DISPLAY=denebola:0.0; export DISPLAY
+PATH="$PATH:$mydir/../bin/"; export PATH
+$@

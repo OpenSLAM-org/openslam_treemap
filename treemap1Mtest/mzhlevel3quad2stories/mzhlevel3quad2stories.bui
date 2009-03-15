@@ -1,0 +1,76 @@
+#************ Robot and Sensor ***
+# ODOMETRY <bias> <sigma> <radius>
+# Odometry error with no bias and 5mm/sqrt(m) noise with a robot radius of 0.3m
+ODOMETRY 0 0.005 0.3
+
+# ASSUMECOVARIANCESCALE <scaleOdo> <scaleLandmark> 
+# Pass the same covariance used for simulation to the algorithm (both odometry and landmarks)
+ASSUMECOVARIANCESCALE 1 1
+
+# SENSOR <fieldOfView> <maxDistance> <observationProb>
+# 180 degree field of view, 3m range
+SENSOR 180 3 1
+
+#SENSORNOISE <angleSigma0> <angleSigma1> <angleSigma2> <distSigma0> <distSigma1> <distSigma2>  <distBias>
+# constant angular error of 1 degree (rms), distance error of 1%
+# A distance bias of 0 m/deg
+SENSORNOISE 1 0 0 0 0.01 0 0
+
+#SPECIALNOISE <sigma>
+# Observing the antennas on the building's top with an uncertainty of 0.5m when hitting a magenta point
+SPECIALNOISE 0.5
+ACTIVATENOISE 1
+
+
+#*********** Environment ******
+
+#SCALE <length>
+#1 pixel corresponds to 0,25m
+SCALE 0.25
+
+# Each building story has the following sequence:
+# E-Elevator, E-tower, W-elevator, S-tower, N-tower, E-Elevator
+
+#STORY <nr> <filename>   Defines story number <nr> with bitmap <filename>
+#define story 0 as in building.ppm
+STORY 0 mzhlevel3quadground.ppm
+STORY 1 mzhlevel3quad.ppm
+STORY 2 mzhlevel3quadtop.ppm
+
+# The sequence of which level to visit when.
+#ELEVATETO <nr>  When reaching an elevator go to story number <nr>
+# when finding an elevator go to story 0.
+
+#In each level of each building we have the sequence 
+# (entrance) - E-elevator - E-part - W-elevator - S-part - N-part - E-elevator / exit
+
+# Story 0 (ground floor)
+# start at center - go to tower 1 - enter tower 1
+ELEVATETO 1 # Tower 1: E-elevator 0-->1
+ELEVATETO 2 # Tower 1: W-elevator 1-->2
+ELEVATETO 0 # Tower 1: E-elevator 2-->0
+ELEVATETO 1 # Tower 1: W-elevator 0-->1
+ELEVATETO 2 # Tower 1: E-elevator 1-->2
+ELEVATETO 0 # Tower 1: W-elevator 2-->0
+#leave tower 1 - enter tower 2
+ELEVATETO 1 # Tower 2: E-elevator 0-->1
+ELEVATETO 2 # Tower 2: W-elevator 1-->2
+ELEVATETO 0 # Tower 2: E-elevator 2-->0
+ELEVATETO 1 # Tower 2: W-elevator 0-->1
+ELEVATETO 2 # Tower 2: E-elevator 1-->2
+ELEVATETO 0 # Tower 2: W-elevator 2-->0
+#leave tower 2 - enter tower 3
+ELEVATETO 1 # Tower 3: E-elevator 0-->1
+ELEVATETO 2 # Tower 3: W-elevator 1-->2
+ELEVATETO 0 # Tower 3: E-elevator 2-->0
+ELEVATETO 1 # Tower 3: W-elevator 0-->1
+ELEVATETO 2 # Tower 3: E-elevator 1-->2
+ELEVATETO 0 # Tower 3: W-elevator 2-->0
+#leave tower 3 - enter tower 4
+ELEVATETO 1 # Tower 2: E-elevator 0-->1
+ELEVATETO 2 # Tower 2: W-elevator 1-->2
+ELEVATETO 0 # Tower 2: E-elevator 2-->0
+ELEVATETO 1 # Tower 2: W-elevator 0-->1
+ELEVATETO 2 # Tower 2: E-elevator 1-->2
+ELEVATETO 0 # Tower 2: W-elevator 2-->0
+#leave tower 4 - go to start

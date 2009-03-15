@@ -1,0 +1,1054 @@
+#************ Robot and Sensor ***
+# ODOMETRY <bias> <sigma> <radius>
+# Odometry error with no bias and 5mm/sqrt(m) noise with a robot radius of 0.3m
+ODOMETRY 0 0.005 0.3
+
+# ASSUMECOVARIANCESCALE <scaleOdo> <scaleLandmark> 
+# Pass the same covariance used for simulation to the algorithm (both odometry and landmarks)
+ASSUMECOVARIANCESCALE 1 1
+
+# SENSOR <fieldOfView> <maxDistance> <observationProb>
+# 180 degree field of view, 3m range
+SENSOR 180 3 1
+
+#SENSORNOISE <angleSigma0> <angleSigma1> <angleSigma2> <distSigma0> <distSigma1> <distSigma2>  <distBias>
+# constant angular error of 1 degree (rms), distance error of 1%
+# A distance bias of 0 m/deg
+SENSORNOISE 1 0 0 0 0.01 0 0
+
+#SPECIALNOISE <sigma>
+# Observing the antennas on the building's top with an uncertainty of 0.5m when hitting a magenta point
+SPECIALNOISE 0.5
+ACTIVATENOISE 2
+
+
+#*********** Environment ******
+
+#SCALE <length>
+#1 pixel corresponds to 0,25m
+SCALE 0.25
+
+# Each building story has the following sequence:
+# E-Elevator, E-tower, W-elevator, S-tower, N-tower, E-Elevator
+
+#STORY <nr> <filename>   Defines story number <nr> with bitmap <filename>
+#define story 0 as in building.ppm
+STORY   0 mzhlevel3quadground.ppm
+STORY   1 mzhlevel3quad.ppm
+STORY   2 mzhlevel3quad.ppm
+STORY   3 mzhlevel3quad.ppm
+STORY   4 mzhlevel3quad.ppm
+STORY   5 mzhlevel3quad.ppm
+STORY   6 mzhlevel3quad.ppm
+STORY   7 mzhlevel3quad.ppm
+STORY   8 mzhlevel3quad.ppm
+STORY   9 mzhlevel3quad.ppm
+STORY  10 mzhlevel3quad.ppm
+STORY  11 mzhlevel3quad.ppm
+STORY  12 mzhlevel3quad.ppm
+STORY  13 mzhlevel3quad.ppm
+STORY  14 mzhlevel3quad.ppm
+STORY  15 mzhlevel3quad.ppm
+STORY  16 mzhlevel3quad.ppm
+STORY  17 mzhlevel3quad.ppm
+STORY  18 mzhlevel3quad.ppm
+STORY  19 mzhlevel3quad.ppm
+STORY  20 mzhlevel3quad.ppm
+STORY  21 mzhlevel3quad.ppm
+STORY  22 mzhlevel3quad.ppm
+STORY  23 mzhlevel3quad.ppm
+STORY  24 mzhlevel3quad.ppm
+STORY  25 mzhlevel3quad.ppm
+STORY  26 mzhlevel3quad.ppm
+STORY  27 mzhlevel3quad.ppm
+STORY  28 mzhlevel3quad.ppm
+STORY  29 mzhlevel3quad.ppm
+STORY  30 mzhlevel3quad.ppm
+STORY  31 mzhlevel3quad.ppm
+STORY  32 mzhlevel3quad.ppm
+STORY  33 mzhlevel3quad.ppm
+STORY  34 mzhlevel3quad.ppm
+STORY  35 mzhlevel3quad.ppm
+STORY  36 mzhlevel3quad.ppm
+STORY  37 mzhlevel3quad.ppm
+STORY  38 mzhlevel3quad.ppm
+STORY  39 mzhlevel3quad.ppm
+STORY  40 mzhlevel3quad.ppm
+STORY  41 mzhlevel3quad.ppm
+STORY  42 mzhlevel3quad.ppm
+STORY  43 mzhlevel3quad.ppm
+STORY  44 mzhlevel3quad.ppm
+STORY  45 mzhlevel3quad.ppm
+STORY  46 mzhlevel3quad.ppm
+STORY  47 mzhlevel3quad.ppm
+STORY  48 mzhlevel3quad.ppm
+STORY  49 mzhlevel3quad.ppm
+STORY  50 mzhlevel3quad.ppm
+STORY  51 mzhlevel3quad.ppm
+STORY  52 mzhlevel3quad.ppm
+STORY  53 mzhlevel3quad.ppm
+STORY  54 mzhlevel3quad.ppm
+STORY  55 mzhlevel3quad.ppm
+STORY  56 mzhlevel3quad.ppm
+STORY  57 mzhlevel3quad.ppm
+STORY  58 mzhlevel3quad.ppm
+STORY  59 mzhlevel3quad.ppm
+STORY  60 mzhlevel3quad.ppm
+STORY  61 mzhlevel3quad.ppm
+STORY  62 mzhlevel3quad.ppm
+STORY  63 mzhlevel3quad.ppm
+STORY  64 mzhlevel3quad.ppm
+STORY  65 mzhlevel3quad.ppm
+STORY  66 mzhlevel3quad.ppm
+STORY  67 mzhlevel3quad.ppm
+STORY  68 mzhlevel3quad.ppm
+STORY  69 mzhlevel3quad.ppm
+STORY  70 mzhlevel3quad.ppm
+STORY  71 mzhlevel3quad.ppm
+STORY  72 mzhlevel3quad.ppm
+STORY  73 mzhlevel3quad.ppm
+STORY  74 mzhlevel3quad.ppm
+STORY  75 mzhlevel3quad.ppm
+STORY  76 mzhlevel3quad.ppm
+STORY  77 mzhlevel3quad.ppm
+STORY  78 mzhlevel3quad.ppm
+STORY  79 mzhlevel3quad.ppm
+STORY  80 mzhlevel3quad.ppm
+STORY  81 mzhlevel3quad.ppm
+STORY  82 mzhlevel3quad.ppm
+STORY  83 mzhlevel3quad.ppm
+STORY  84 mzhlevel3quad.ppm
+STORY  85 mzhlevel3quad.ppm
+STORY  86 mzhlevel3quad.ppm
+STORY  87 mzhlevel3quad.ppm
+STORY  88 mzhlevel3quad.ppm
+STORY  89 mzhlevel3quad.ppm
+STORY  90 mzhlevel3quad.ppm
+STORY  91 mzhlevel3quad.ppm
+STORY  92 mzhlevel3quad.ppm
+STORY  93 mzhlevel3quad.ppm
+STORY  94 mzhlevel3quad.ppm
+STORY  95 mzhlevel3quad.ppm
+STORY  96 mzhlevel3quad.ppm
+STORY  97 mzhlevel3quad.ppm
+STORY  98 mzhlevel3quad.ppm
+STORY  99 mzhlevel3quad.ppm
+
+# The sequence of which level to visit when.
+#ELEVATETO <nr>  When reaching an elevator go to story number <nr>
+# when finding an elevator go to story 0.
+
+#In each level of each building we have the sequence 
+# (entrance) - E-elevator - E-part - W-elevator - S-part - N-part - E-elevator / exit
+
+# Story 0 (ground floor)
+# start at center - go to tower 1 - enter tower 1
+# first go upstairs
+ELEVATETO  1 # E   0 --> 1
+ELEVATETO  2 # W   1 --> 2
+ELEVATETO  3 # E   2 --> 3
+ELEVATETO  4 # W   3 --> 4
+ELEVATETO  5 # E   4 --> 5
+ELEVATETO  6 # W   5 --> 6
+ELEVATETO  7 # E   6 --> 7
+ELEVATETO  8 # W   7 --> 8
+ELEVATETO  9 # E   8 --> 9
+ELEVATETO 10 # W   9 -->10
+ELEVATETO 11 # E  10 -->11
+ELEVATETO 12 # W  11 -->12
+ELEVATETO 13 # E  12 -->13
+ELEVATETO 14 # W  13 -->14
+ELEVATETO 15 # E  14 -->15
+ELEVATETO 16 # W  15 -->16
+ELEVATETO 17 # E  16 -->17
+ELEVATETO 18 # W  17 -->18
+ELEVATETO 19 # E  18 -->19
+ELEVATETO 20 # W  19 -->20
+ELEVATETO 21 # E  20 -->21
+ELEVATETO 22 # W  21 -->22
+ELEVATETO 23 # E  22 -->23
+ELEVATETO 24 # W  23 -->24
+ELEVATETO 25 # E  24 -->25
+ELEVATETO 26 # W  25 -->26
+ELEVATETO 27 # E  26 -->27
+ELEVATETO 28 # W  27 -->28
+ELEVATETO 29 # E  28 -->29
+ELEVATETO 30 # W  29 -->30
+ELEVATETO 31 # E  30 -->31
+ELEVATETO 32 # W  31 -->32
+ELEVATETO 33 # E  32 -->33
+ELEVATETO 34 # W  33 -->34
+ELEVATETO 35 # E  34 -->35
+ELEVATETO 36 # W  35 -->36
+ELEVATETO 37 # E  36 -->37
+ELEVATETO 38 # W  37 -->38
+ELEVATETO 39 # E  38 -->39
+ELEVATETO 40 # W  39 -->40
+ELEVATETO 41 # E  40 -->41
+ELEVATETO 42 # W  41 -->42
+ELEVATETO 43 # E  42 -->43
+ELEVATETO 44 # W  43 -->44
+ELEVATETO 45 # E  44 -->45
+ELEVATETO 46 # W  45 -->46
+ELEVATETO 47 # E  46 -->47
+ELEVATETO 48 # W  47 -->48
+ELEVATETO 49 # E  48 -->49
+ELEVATETO 50 # W  49 -->50
+ELEVATETO 51 # E  50 -->51
+ELEVATETO 52 # W  51 -->52
+ELEVATETO 53 # E  52 -->53
+ELEVATETO 54 # W  53 -->54
+ELEVATETO 55 # E  54 -->55
+ELEVATETO 56 # W  55 -->56
+ELEVATETO 57 # E  56 -->57
+ELEVATETO 58 # W  57 -->58
+ELEVATETO 59 # E  58 -->59
+ELEVATETO 60 # W  59 -->60
+ELEVATETO 61 # E  60 -->61
+ELEVATETO 62 # W  61 -->62
+ELEVATETO 63 # E  62 -->63
+ELEVATETO 64 # W  63 -->64
+ELEVATETO 65 # E  64 -->65
+ELEVATETO 66 # W  65 -->66
+ELEVATETO 67 # E  66 -->67
+ELEVATETO 68 # W  67 -->68
+ELEVATETO 69 # E  68 -->69
+ELEVATETO 70 # W  69 -->70
+ELEVATETO 71 # E  70 -->71
+ELEVATETO 72 # W  71 -->72
+ELEVATETO 73 # E  72 -->73
+ELEVATETO 74 # W  73 -->74
+ELEVATETO 75 # E  74 -->75
+ELEVATETO 76 # W  75 -->76
+ELEVATETO 77 # E  76 -->77
+ELEVATETO 78 # W  77 -->78
+ELEVATETO 79 # E  78 -->79
+ELEVATETO 80 # W  79 -->80
+ELEVATETO 81 # E  80 -->81
+ELEVATETO 82 # W  81 -->82
+ELEVATETO 83 # E  82 -->83
+ELEVATETO 84 # W  83 -->84
+ELEVATETO 85 # E  84 -->85
+ELEVATETO 86 # W  85 -->86
+ELEVATETO 87 # E  86 -->87
+ELEVATETO 88 # W  87 -->88
+ELEVATETO 89 # E  88 -->89
+ELEVATETO 90 # W  89 -->90
+ELEVATETO 91 # E  90 -->91
+ELEVATETO 92 # W  91 -->92
+ELEVATETO 93 # E  92 -->93
+ELEVATETO 94 # W  93 -->94
+ELEVATETO 95 # E  94 -->95
+ELEVATETO 96 # W  95 -->96
+ELEVATETO 97 # E  96 -->97
+ELEVATETO 98 # W  97 -->98
+ELEVATETO 99 # E  98 -->99
+# now go downstairs
+ELEVATETO 90 # W 99 -->90
+ELEVATETO 80 # E 90 -->80
+ELEVATETO 70 # W 80 -->70
+ELEVATETO 60 # E 70 -->60
+ELEVATETO 50 # W 60 -->50
+ELEVATETO 40 # E 50 -->40
+ELEVATETO 30 # W 40 -->30
+ELEVATETO 20 # E 30 -->20
+ELEVATETO 10 # W 20 -->10
+ELEVATETO  0 # E 10 --> 0
+# now go upstairs again
+ELEVATETO  1  # W   0 -->  1
+ELEVATETO  2  # E   1 -->  2
+ELEVATETO  3  # W   2 -->  3
+ELEVATETO  4  # E   3 -->  4
+ELEVATETO  5  # W   4 -->  5
+ELEVATETO  6  # E   5 -->  6
+ELEVATETO  7  # W   6 -->  7
+ELEVATETO  8  # E   7 -->  8
+ELEVATETO  9  # W   8 -->  9
+ELEVATETO 10  # E   9 --> 10
+ELEVATETO 11  # W  10 --> 11
+ELEVATETO 12  # E  11 --> 12
+ELEVATETO 13  # W  12 --> 13
+ELEVATETO 14  # E  13 --> 14
+ELEVATETO 15  # W  14 --> 15
+ELEVATETO 16  # E  15 --> 16
+ELEVATETO 17  # W  16 --> 17
+ELEVATETO 18  # E  17 --> 18
+ELEVATETO 19  # W  18 --> 19
+ELEVATETO 20  # E  19 --> 20
+ELEVATETO 21  # W  20 --> 21
+ELEVATETO 22  # E  21 --> 22
+ELEVATETO 23  # W  22 --> 23
+ELEVATETO 24  # E  23 --> 24
+ELEVATETO 25  # W  24 --> 25
+ELEVATETO 26  # E  25 --> 26
+ELEVATETO 27  # W  26 --> 27
+ELEVATETO 28  # E  27 --> 28
+ELEVATETO 29  # W  28 --> 29
+ELEVATETO 30  # E  29 --> 30
+ELEVATETO 31  # W  30 --> 31
+ELEVATETO 32  # E  31 --> 32
+ELEVATETO 33  # W  32 --> 33
+ELEVATETO 34  # E  33 --> 34
+ELEVATETO 35  # W  34 --> 35
+ELEVATETO 36  # E  35 --> 36
+ELEVATETO 37  # W  36 --> 37
+ELEVATETO 38  # E  37 --> 38
+ELEVATETO 39  # W  38 --> 39
+ELEVATETO 40  # E  39 --> 40
+ELEVATETO 31  # W  30 --> 31
+ELEVATETO 32  # E  31 --> 32
+ELEVATETO 33  # W  32 --> 33
+ELEVATETO 34  # E  33 --> 34
+ELEVATETO 35  # W  34 --> 35
+ELEVATETO 36  # E  35 --> 36
+ELEVATETO 37  # W  36 --> 37
+ELEVATETO 38  # E  37 --> 38
+ELEVATETO 39  # W  38 --> 39
+ELEVATETO 40  # E  39 --> 40
+ELEVATETO 41  # W  40 --> 41
+ELEVATETO 42  # E  41 --> 42
+ELEVATETO 43  # W  42 --> 43
+ELEVATETO 44  # E  43 --> 44
+ELEVATETO 45  # W  44 --> 45
+ELEVATETO 46  # E  45 --> 46
+ELEVATETO 47  # W  46 --> 47
+ELEVATETO 48  # E  47 --> 48
+ELEVATETO 49  # W  48 --> 49
+ELEVATETO 50  # E  49 --> 50
+ELEVATETO 51  # W  50 --> 51
+ELEVATETO 52  # E  51 --> 52
+ELEVATETO 53  # W  52 --> 53
+ELEVATETO 54  # E  53 --> 54
+ELEVATETO 55  # W  54 --> 55
+ELEVATETO 56  # E  55 --> 56
+ELEVATETO 57  # W  56 --> 57
+ELEVATETO 58  # E  57 --> 58
+ELEVATETO 59  # W  58 --> 59
+ELEVATETO 60  # E  59 --> 60
+ELEVATETO 61  # W  60 --> 61
+ELEVATETO 62  # E  61 --> 62
+ELEVATETO 63  # W  62 --> 63
+ELEVATETO 64  # E  63 --> 64
+ELEVATETO 65  # W  64 --> 65
+ELEVATETO 66  # E  65 --> 66
+ELEVATETO 67  # W  66 --> 67
+ELEVATETO 68  # E  67 --> 68
+ELEVATETO 69  # W  68 --> 69
+ELEVATETO 70  # E  69 --> 70
+ELEVATETO 71  # W  70 --> 71
+ELEVATETO 72  # E  71 --> 72
+ELEVATETO 73  # W  72 --> 73
+ELEVATETO 74  # E  73 --> 74
+ELEVATETO 75  # W  74 --> 75
+ELEVATETO 76  # E  75 --> 76
+ELEVATETO 77  # W  76 --> 77
+ELEVATETO 78  # E  77 --> 78
+ELEVATETO 79  # W  78 --> 79
+ELEVATETO 80  # E  79 --> 80
+ELEVATETO 81  # W  80 --> 81
+ELEVATETO 82  # E  81 --> 82
+ELEVATETO 83  # W  82 --> 83
+ELEVATETO 84  # E  83 --> 84
+ELEVATETO 85  # W  84 --> 85
+ELEVATETO 86  # E  85 --> 86
+ELEVATETO 87  # W  86 --> 87
+ELEVATETO 88  # E  87 --> 88
+ELEVATETO 89  # W  88 --> 89
+ELEVATETO 90  # E  89 --> 90
+ELEVATETO 91  # W  90 --> 91
+ELEVATETO 92  # E  91 --> 92
+ELEVATETO 93  # W  92 --> 93
+ELEVATETO 94  # E  93 --> 94
+ELEVATETO 95  # W  94 --> 95
+ELEVATETO 96  # E  95 --> 96
+ELEVATETO 97  # W  96 --> 97
+ELEVATETO 98  # E  97 --> 98
+ELEVATETO 99  # W  98 --> 99
+ELEVATETO  1  # E  99 --> 1
+ELEVATETO  0  # W   1 --> 0
+# leave
+
+#leave tower 1 - enter tower 2
+
+# first go upstairs
+ELEVATETO  1 # E   0 --> 1
+ELEVATETO  2 # W   1 --> 2
+ELEVATETO  3 # E   2 --> 3
+ELEVATETO  4 # W   3 --> 4
+ELEVATETO  5 # E   4 --> 5
+ELEVATETO  6 # W   5 --> 6
+ELEVATETO  7 # E   6 --> 7
+ELEVATETO  8 # W   7 --> 8
+ELEVATETO  9 # E   8 --> 9
+ELEVATETO 10 # W   9 -->10
+ELEVATETO 11 # E  10 -->11
+ELEVATETO 12 # W  11 -->12
+ELEVATETO 13 # E  12 -->13
+ELEVATETO 14 # W  13 -->14
+ELEVATETO 15 # E  14 -->15
+ELEVATETO 16 # W  15 -->16
+ELEVATETO 17 # E  16 -->17
+ELEVATETO 18 # W  17 -->18
+ELEVATETO 19 # E  18 -->19
+ELEVATETO 20 # W  19 -->20
+ELEVATETO 21 # E  20 -->21
+ELEVATETO 22 # W  21 -->22
+ELEVATETO 23 # E  22 -->23
+ELEVATETO 24 # W  23 -->24
+ELEVATETO 25 # E  24 -->25
+ELEVATETO 26 # W  25 -->26
+ELEVATETO 27 # E  26 -->27
+ELEVATETO 28 # W  27 -->28
+ELEVATETO 29 # E  28 -->29
+ELEVATETO 30 # W  29 -->30
+ELEVATETO 31 # E  30 -->31
+ELEVATETO 32 # W  31 -->32
+ELEVATETO 33 # E  32 -->33
+ELEVATETO 34 # W  33 -->34
+ELEVATETO 35 # E  34 -->35
+ELEVATETO 36 # W  35 -->36
+ELEVATETO 37 # E  36 -->37
+ELEVATETO 38 # W  37 -->38
+ELEVATETO 39 # E  38 -->39
+ELEVATETO 40 # W  39 -->40
+ELEVATETO 41 # E  40 -->41
+ELEVATETO 42 # W  41 -->42
+ELEVATETO 43 # E  42 -->43
+ELEVATETO 44 # W  43 -->44
+ELEVATETO 45 # E  44 -->45
+ELEVATETO 46 # W  45 -->46
+ELEVATETO 47 # E  46 -->47
+ELEVATETO 48 # W  47 -->48
+ELEVATETO 49 # E  48 -->49
+ELEVATETO 50 # W  49 -->50
+ELEVATETO 51 # E  50 -->51
+ELEVATETO 52 # W  51 -->52
+ELEVATETO 53 # E  52 -->53
+ELEVATETO 54 # W  53 -->54
+ELEVATETO 55 # E  54 -->55
+ELEVATETO 56 # W  55 -->56
+ELEVATETO 57 # E  56 -->57
+ELEVATETO 58 # W  57 -->58
+ELEVATETO 59 # E  58 -->59
+ELEVATETO 60 # W  59 -->60
+ELEVATETO 61 # E  60 -->61
+ELEVATETO 62 # W  61 -->62
+ELEVATETO 63 # E  62 -->63
+ELEVATETO 64 # W  63 -->64
+ELEVATETO 65 # E  64 -->65
+ELEVATETO 66 # W  65 -->66
+ELEVATETO 67 # E  66 -->67
+ELEVATETO 68 # W  67 -->68
+ELEVATETO 69 # E  68 -->69
+ELEVATETO 70 # W  69 -->70
+ELEVATETO 71 # E  70 -->71
+ELEVATETO 72 # W  71 -->72
+ELEVATETO 73 # E  72 -->73
+ELEVATETO 74 # W  73 -->74
+ELEVATETO 75 # E  74 -->75
+ELEVATETO 76 # W  75 -->76
+ELEVATETO 77 # E  76 -->77
+ELEVATETO 78 # W  77 -->78
+ELEVATETO 79 # E  78 -->79
+ELEVATETO 80 # W  79 -->80
+ELEVATETO 81 # E  80 -->81
+ELEVATETO 82 # W  81 -->82
+ELEVATETO 83 # E  82 -->83
+ELEVATETO 84 # W  83 -->84
+ELEVATETO 85 # E  84 -->85
+ELEVATETO 86 # W  85 -->86
+ELEVATETO 87 # E  86 -->87
+ELEVATETO 88 # W  87 -->88
+ELEVATETO 89 # E  88 -->89
+ELEVATETO 90 # W  89 -->90
+ELEVATETO 91 # E  90 -->91
+ELEVATETO 92 # W  91 -->92
+ELEVATETO 93 # E  92 -->93
+ELEVATETO 94 # W  93 -->94
+ELEVATETO 95 # E  94 -->95
+ELEVATETO 96 # W  95 -->96
+ELEVATETO 97 # E  96 -->97
+ELEVATETO 98 # W  97 -->98
+ELEVATETO 99 # E  98 -->99
+# now go downstairs
+ELEVATETO 90 # W 99 -->90
+ELEVATETO 80 # E 90 -->80
+ELEVATETO 70 # W 80 -->70
+ELEVATETO 60 # E 70 -->60
+ELEVATETO 50 # W 60 -->50
+ELEVATETO 40 # E 50 -->40
+ELEVATETO 30 # W 40 -->30
+ELEVATETO 20 # E 30 -->20
+ELEVATETO 10 # W 20 -->10
+ELEVATETO  0 # E 10 --> 0
+# now go upstairs again
+ELEVATETO  1  # W   0 -->  1
+ELEVATETO  2  # E   1 -->  2
+ELEVATETO  3  # W   2 -->  3
+ELEVATETO  4  # E   3 -->  4
+ELEVATETO  5  # W   4 -->  5
+ELEVATETO  6  # E   5 -->  6
+ELEVATETO  7  # W   6 -->  7
+ELEVATETO  8  # E   7 -->  8
+ELEVATETO  9  # W   8 -->  9
+ELEVATETO 10  # E   9 --> 10
+ELEVATETO 11  # W  10 --> 11
+ELEVATETO 12  # E  11 --> 12
+ELEVATETO 13  # W  12 --> 13
+ELEVATETO 14  # E  13 --> 14
+ELEVATETO 15  # W  14 --> 15
+ELEVATETO 16  # E  15 --> 16
+ELEVATETO 17  # W  16 --> 17
+ELEVATETO 18  # E  17 --> 18
+ELEVATETO 19  # W  18 --> 19
+ELEVATETO 20  # E  19 --> 20
+ELEVATETO 21  # W  20 --> 21
+ELEVATETO 22  # E  21 --> 22
+ELEVATETO 23  # W  22 --> 23
+ELEVATETO 24  # E  23 --> 24
+ELEVATETO 25  # W  24 --> 25
+ELEVATETO 26  # E  25 --> 26
+ELEVATETO 27  # W  26 --> 27
+ELEVATETO 28  # E  27 --> 28
+ELEVATETO 29  # W  28 --> 29
+ELEVATETO 30  # E  29 --> 30
+ELEVATETO 31  # W  30 --> 31
+ELEVATETO 32  # E  31 --> 32
+ELEVATETO 33  # W  32 --> 33
+ELEVATETO 34  # E  33 --> 34
+ELEVATETO 35  # W  34 --> 35
+ELEVATETO 36  # E  35 --> 36
+ELEVATETO 37  # W  36 --> 37
+ELEVATETO 38  # E  37 --> 38
+ELEVATETO 39  # W  38 --> 39
+ELEVATETO 40  # E  39 --> 40
+ELEVATETO 31  # W  30 --> 31
+ELEVATETO 32  # E  31 --> 32
+ELEVATETO 33  # W  32 --> 33
+ELEVATETO 34  # E  33 --> 34
+ELEVATETO 35  # W  34 --> 35
+ELEVATETO 36  # E  35 --> 36
+ELEVATETO 37  # W  36 --> 37
+ELEVATETO 38  # E  37 --> 38
+ELEVATETO 39  # W  38 --> 39
+ELEVATETO 40  # E  39 --> 40
+ELEVATETO 41  # W  40 --> 41
+ELEVATETO 42  # E  41 --> 42
+ELEVATETO 43  # W  42 --> 43
+ELEVATETO 44  # E  43 --> 44
+ELEVATETO 45  # W  44 --> 45
+ELEVATETO 46  # E  45 --> 46
+ELEVATETO 47  # W  46 --> 47
+ELEVATETO 48  # E  47 --> 48
+ELEVATETO 49  # W  48 --> 49
+ELEVATETO 50  # E  49 --> 50
+ELEVATETO 51  # W  50 --> 51
+ELEVATETO 52  # E  51 --> 52
+ELEVATETO 53  # W  52 --> 53
+ELEVATETO 54  # E  53 --> 54
+ELEVATETO 55  # W  54 --> 55
+ELEVATETO 56  # E  55 --> 56
+ELEVATETO 57  # W  56 --> 57
+ELEVATETO 58  # E  57 --> 58
+ELEVATETO 59  # W  58 --> 59
+ELEVATETO 60  # E  59 --> 60
+ELEVATETO 61  # W  60 --> 61
+ELEVATETO 62  # E  61 --> 62
+ELEVATETO 63  # W  62 --> 63
+ELEVATETO 64  # E  63 --> 64
+ELEVATETO 65  # W  64 --> 65
+ELEVATETO 66  # E  65 --> 66
+ELEVATETO 67  # W  66 --> 67
+ELEVATETO 68  # E  67 --> 68
+ELEVATETO 69  # W  68 --> 69
+ELEVATETO 70  # E  69 --> 70
+ELEVATETO 71  # W  70 --> 71
+ELEVATETO 72  # E  71 --> 72
+ELEVATETO 73  # W  72 --> 73
+ELEVATETO 74  # E  73 --> 74
+ELEVATETO 75  # W  74 --> 75
+ELEVATETO 76  # E  75 --> 76
+ELEVATETO 77  # W  76 --> 77
+ELEVATETO 78  # E  77 --> 78
+ELEVATETO 79  # W  78 --> 79
+ELEVATETO 80  # E  79 --> 80
+ELEVATETO 81  # W  80 --> 81
+ELEVATETO 82  # E  81 --> 82
+ELEVATETO 83  # W  82 --> 83
+ELEVATETO 84  # E  83 --> 84
+ELEVATETO 85  # W  84 --> 85
+ELEVATETO 86  # E  85 --> 86
+ELEVATETO 87  # W  86 --> 87
+ELEVATETO 88  # E  87 --> 88
+ELEVATETO 89  # W  88 --> 89
+ELEVATETO 90  # E  89 --> 90
+ELEVATETO 91  # W  90 --> 91
+ELEVATETO 92  # E  91 --> 92
+ELEVATETO 93  # W  92 --> 93
+ELEVATETO 94  # E  93 --> 94
+ELEVATETO 95  # W  94 --> 95
+ELEVATETO 96  # E  95 --> 96
+ELEVATETO 97  # W  96 --> 97
+ELEVATETO 98  # E  97 --> 98
+ELEVATETO 99  # W  98 --> 99
+ELEVATETO  1  # E  99 -->  1
+ELEVATETO   0 # W   1 -->  0
+# leave
+
+#leave tower 2 - enter tower 3
+
+# first go upstairs
+ELEVATETO  1 # E   0 --> 1
+ELEVATETO  2 # W   1 --> 2
+ELEVATETO  3 # E   2 --> 3
+ELEVATETO  4 # W   3 --> 4
+ELEVATETO  5 # E   4 --> 5
+ELEVATETO  6 # W   5 --> 6
+ELEVATETO  7 # E   6 --> 7
+ELEVATETO  8 # W   7 --> 8
+ELEVATETO  9 # E   8 --> 9
+ELEVATETO 10 # W   9 -->10
+ELEVATETO 11 # E  10 -->11
+ELEVATETO 12 # W  11 -->12
+ELEVATETO 13 # E  12 -->13
+ELEVATETO 14 # W  13 -->14
+ELEVATETO 15 # E  14 -->15
+ELEVATETO 16 # W  15 -->16
+ELEVATETO 17 # E  16 -->17
+ELEVATETO 18 # W  17 -->18
+ELEVATETO 19 # E  18 -->19
+ELEVATETO 20 # W  19 -->20
+ELEVATETO 21 # E  20 -->21
+ELEVATETO 22 # W  21 -->22
+ELEVATETO 23 # E  22 -->23
+ELEVATETO 24 # W  23 -->24
+ELEVATETO 25 # E  24 -->25
+ELEVATETO 26 # W  25 -->26
+ELEVATETO 27 # E  26 -->27
+ELEVATETO 28 # W  27 -->28
+ELEVATETO 29 # E  28 -->29
+ELEVATETO 30 # W  29 -->30
+ELEVATETO 31 # E  30 -->31
+ELEVATETO 32 # W  31 -->32
+ELEVATETO 33 # E  32 -->33
+ELEVATETO 34 # W  33 -->34
+ELEVATETO 35 # E  34 -->35
+ELEVATETO 36 # W  35 -->36
+ELEVATETO 37 # E  36 -->37
+ELEVATETO 38 # W  37 -->38
+ELEVATETO 39 # E  38 -->39
+ELEVATETO 40 # W  39 -->40
+ELEVATETO 41 # E  40 -->41
+ELEVATETO 42 # W  41 -->42
+ELEVATETO 43 # E  42 -->43
+ELEVATETO 44 # W  43 -->44
+ELEVATETO 45 # E  44 -->45
+ELEVATETO 46 # W  45 -->46
+ELEVATETO 47 # E  46 -->47
+ELEVATETO 48 # W  47 -->48
+ELEVATETO 49 # E  48 -->49
+ELEVATETO 50 # W  49 -->50
+ELEVATETO 51 # E  50 -->51
+ELEVATETO 52 # W  51 -->52
+ELEVATETO 53 # E  52 -->53
+ELEVATETO 54 # W  53 -->54
+ELEVATETO 55 # E  54 -->55
+ELEVATETO 56 # W  55 -->56
+ELEVATETO 57 # E  56 -->57
+ELEVATETO 58 # W  57 -->58
+ELEVATETO 59 # E  58 -->59
+ELEVATETO 60 # W  59 -->60
+ELEVATETO 61 # E  60 -->61
+ELEVATETO 62 # W  61 -->62
+ELEVATETO 63 # E  62 -->63
+ELEVATETO 64 # W  63 -->64
+ELEVATETO 65 # E  64 -->65
+ELEVATETO 66 # W  65 -->66
+ELEVATETO 67 # E  66 -->67
+ELEVATETO 68 # W  67 -->68
+ELEVATETO 69 # E  68 -->69
+ELEVATETO 70 # W  69 -->70
+ELEVATETO 71 # E  70 -->71
+ELEVATETO 72 # W  71 -->72
+ELEVATETO 73 # E  72 -->73
+ELEVATETO 74 # W  73 -->74
+ELEVATETO 75 # E  74 -->75
+ELEVATETO 76 # W  75 -->76
+ELEVATETO 77 # E  76 -->77
+ELEVATETO 78 # W  77 -->78
+ELEVATETO 79 # E  78 -->79
+ELEVATETO 80 # W  79 -->80
+ELEVATETO 81 # E  80 -->81
+ELEVATETO 82 # W  81 -->82
+ELEVATETO 83 # E  82 -->83
+ELEVATETO 84 # W  83 -->84
+ELEVATETO 85 # E  84 -->85
+ELEVATETO 86 # W  85 -->86
+ELEVATETO 87 # E  86 -->87
+ELEVATETO 88 # W  87 -->88
+ELEVATETO 89 # E  88 -->89
+ELEVATETO 90 # W  89 -->90
+ELEVATETO 91 # E  90 -->91
+ELEVATETO 92 # W  91 -->92
+ELEVATETO 93 # E  92 -->93
+ELEVATETO 94 # W  93 -->94
+ELEVATETO 95 # E  94 -->95
+ELEVATETO 96 # W  95 -->96
+ELEVATETO 97 # E  96 -->97
+ELEVATETO 98 # W  97 -->98
+ELEVATETO 99 # E  98 -->99
+# now go downstairs
+ELEVATETO 90 # W 99 -->90
+ELEVATETO 80 # E 90 -->80
+ELEVATETO 70 # W 80 -->70
+ELEVATETO 60 # E 70 -->60
+ELEVATETO 50 # W 60 -->50
+ELEVATETO 40 # E 50 -->40
+ELEVATETO 30 # W 40 -->30
+ELEVATETO 20 # E 30 -->20
+ELEVATETO 10 # W 20 -->10
+ELEVATETO  0 # E 10 --> 0
+# now go upstairs again
+ELEVATETO  1  # W   0 -->  1
+ELEVATETO  2  # E   1 -->  2
+ELEVATETO  3  # W   2 -->  3
+ELEVATETO  4  # E   3 -->  4
+ELEVATETO  5  # W   4 -->  5
+ELEVATETO  6  # E   5 -->  6
+ELEVATETO  7  # W   6 -->  7
+ELEVATETO  8  # E   7 -->  8
+ELEVATETO  9  # W   8 -->  9
+ELEVATETO 10  # E   9 --> 10
+ELEVATETO 11  # W  10 --> 11
+ELEVATETO 12  # E  11 --> 12
+ELEVATETO 13  # W  12 --> 13
+ELEVATETO 14  # E  13 --> 14
+ELEVATETO 15  # W  14 --> 15
+ELEVATETO 16  # E  15 --> 16
+ELEVATETO 17  # W  16 --> 17
+ELEVATETO 18  # E  17 --> 18
+ELEVATETO 19  # W  18 --> 19
+ELEVATETO 20  # E  19 --> 20
+ELEVATETO 21  # W  20 --> 21
+ELEVATETO 22  # E  21 --> 22
+ELEVATETO 23  # W  22 --> 23
+ELEVATETO 24  # E  23 --> 24
+ELEVATETO 25  # W  24 --> 25
+ELEVATETO 26  # E  25 --> 26
+ELEVATETO 27  # W  26 --> 27
+ELEVATETO 28  # E  27 --> 28
+ELEVATETO 29  # W  28 --> 29
+ELEVATETO 30  # E  29 --> 30
+ELEVATETO 31  # W  30 --> 31
+ELEVATETO 32  # E  31 --> 32
+ELEVATETO 33  # W  32 --> 33
+ELEVATETO 34  # E  33 --> 34
+ELEVATETO 35  # W  34 --> 35
+ELEVATETO 36  # E  35 --> 36
+ELEVATETO 37  # W  36 --> 37
+ELEVATETO 38  # E  37 --> 38
+ELEVATETO 39  # W  38 --> 39
+ELEVATETO 40  # E  39 --> 40
+ELEVATETO 31  # W  30 --> 31
+ELEVATETO 32  # E  31 --> 32
+ELEVATETO 33  # W  32 --> 33
+ELEVATETO 34  # E  33 --> 34
+ELEVATETO 35  # W  34 --> 35
+ELEVATETO 36  # E  35 --> 36
+ELEVATETO 37  # W  36 --> 37
+ELEVATETO 38  # E  37 --> 38
+ELEVATETO 39  # W  38 --> 39
+ELEVATETO 40  # E  39 --> 40
+ELEVATETO 41  # W  40 --> 41
+ELEVATETO 42  # E  41 --> 42
+ELEVATETO 43  # W  42 --> 43
+ELEVATETO 44  # E  43 --> 44
+ELEVATETO 45  # W  44 --> 45
+ELEVATETO 46  # E  45 --> 46
+ELEVATETO 47  # W  46 --> 47
+ELEVATETO 48  # E  47 --> 48
+ELEVATETO 49  # W  48 --> 49
+ELEVATETO 50  # E  49 --> 50
+ELEVATETO 51  # W  50 --> 51
+ELEVATETO 52  # E  51 --> 52
+ELEVATETO 53  # W  52 --> 53
+ELEVATETO 54  # E  53 --> 54
+ELEVATETO 55  # W  54 --> 55
+ELEVATETO 56  # E  55 --> 56
+ELEVATETO 57  # W  56 --> 57
+ELEVATETO 58  # E  57 --> 58
+ELEVATETO 59  # W  58 --> 59
+ELEVATETO 60  # E  59 --> 60
+ELEVATETO 61  # W  60 --> 61
+ELEVATETO 62  # E  61 --> 62
+ELEVATETO 63  # W  62 --> 63
+ELEVATETO 64  # E  63 --> 64
+ELEVATETO 65  # W  64 --> 65
+ELEVATETO 66  # E  65 --> 66
+ELEVATETO 67  # W  66 --> 67
+ELEVATETO 68  # E  67 --> 68
+ELEVATETO 69  # W  68 --> 69
+ELEVATETO 70  # E  69 --> 70
+ELEVATETO 71  # W  70 --> 71
+ELEVATETO 72  # E  71 --> 72
+ELEVATETO 73  # W  72 --> 73
+ELEVATETO 74  # E  73 --> 74
+ELEVATETO 75  # W  74 --> 75
+ELEVATETO 76  # E  75 --> 76
+ELEVATETO 77  # W  76 --> 77
+ELEVATETO 78  # E  77 --> 78
+ELEVATETO 79  # W  78 --> 79
+ELEVATETO 80  # E  79 --> 80
+ELEVATETO 81  # W  80 --> 81
+ELEVATETO 82  # E  81 --> 82
+ELEVATETO 83  # W  82 --> 83
+ELEVATETO 84  # E  83 --> 84
+ELEVATETO 85  # W  84 --> 85
+ELEVATETO 86  # E  85 --> 86
+ELEVATETO 87  # W  86 --> 87
+ELEVATETO 88  # E  87 --> 88
+ELEVATETO 89  # W  88 --> 89
+ELEVATETO 90  # E  89 --> 90
+ELEVATETO 91  # W  90 --> 91
+ELEVATETO 92  # E  91 --> 92
+ELEVATETO 93  # W  92 --> 93
+ELEVATETO 94  # E  93 --> 94
+ELEVATETO 95  # W  94 --> 95
+ELEVATETO 96  # E  95 --> 96
+ELEVATETO 97  # W  96 --> 97
+ELEVATETO 98  # E  97 --> 98
+ELEVATETO 99  # W  98 --> 99
+ELEVATETO  1  # E  99 -->  1
+ELEVATETO   0 # W 100 -->  0
+# leave
+
+#leave tower 3 - enter tower 4
+
+# first go upstairs
+ELEVATETO  1 # E   0 --> 1
+ELEVATETO  2 # W   1 --> 2
+ELEVATETO  3 # E   2 --> 3
+ELEVATETO  4 # W   3 --> 4
+ELEVATETO  5 # E   4 --> 5
+ELEVATETO  6 # W   5 --> 6
+ELEVATETO  7 # E   6 --> 7
+ELEVATETO  8 # W   7 --> 8
+ELEVATETO  9 # E   8 --> 9
+ELEVATETO 10 # W   9 -->10
+ELEVATETO 11 # E  10 -->11
+ELEVATETO 12 # W  11 -->12
+ELEVATETO 13 # E  12 -->13
+ELEVATETO 14 # W  13 -->14
+ELEVATETO 15 # E  14 -->15
+ELEVATETO 16 # W  15 -->16
+ELEVATETO 17 # E  16 -->17
+ELEVATETO 18 # W  17 -->18
+ELEVATETO 19 # E  18 -->19
+ELEVATETO 20 # W  19 -->20
+ELEVATETO 21 # E  20 -->21
+ELEVATETO 22 # W  21 -->22
+ELEVATETO 23 # E  22 -->23
+ELEVATETO 24 # W  23 -->24
+ELEVATETO 25 # E  24 -->25
+ELEVATETO 26 # W  25 -->26
+ELEVATETO 27 # E  26 -->27
+ELEVATETO 28 # W  27 -->28
+ELEVATETO 29 # E  28 -->29
+ELEVATETO 30 # W  29 -->30
+ELEVATETO 31 # E  30 -->31
+ELEVATETO 32 # W  31 -->32
+ELEVATETO 33 # E  32 -->33
+ELEVATETO 34 # W  33 -->34
+ELEVATETO 35 # E  34 -->35
+ELEVATETO 36 # W  35 -->36
+ELEVATETO 37 # E  36 -->37
+ELEVATETO 38 # W  37 -->38
+ELEVATETO 39 # E  38 -->39
+ELEVATETO 40 # W  39 -->40
+ELEVATETO 41 # E  40 -->41
+ELEVATETO 42 # W  41 -->42
+ELEVATETO 43 # E  42 -->43
+ELEVATETO 44 # W  43 -->44
+ELEVATETO 45 # E  44 -->45
+ELEVATETO 46 # W  45 -->46
+ELEVATETO 47 # E  46 -->47
+ELEVATETO 48 # W  47 -->48
+ELEVATETO 49 # E  48 -->49
+ELEVATETO 50 # W  49 -->50
+ELEVATETO 51 # E  50 -->51
+ELEVATETO 52 # W  51 -->52
+ELEVATETO 53 # E  52 -->53
+ELEVATETO 54 # W  53 -->54
+ELEVATETO 55 # E  54 -->55
+ELEVATETO 56 # W  55 -->56
+ELEVATETO 57 # E  56 -->57
+ELEVATETO 58 # W  57 -->58
+ELEVATETO 59 # E  58 -->59
+ELEVATETO 60 # W  59 -->60
+ELEVATETO 61 # E  60 -->61
+ELEVATETO 62 # W  61 -->62
+ELEVATETO 63 # E  62 -->63
+ELEVATETO 64 # W  63 -->64
+ELEVATETO 65 # E  64 -->65
+ELEVATETO 66 # W  65 -->66
+ELEVATETO 67 # E  66 -->67
+ELEVATETO 68 # W  67 -->68
+ELEVATETO 69 # E  68 -->69
+ELEVATETO 70 # W  69 -->70
+ELEVATETO 71 # E  70 -->71
+ELEVATETO 72 # W  71 -->72
+ELEVATETO 73 # E  72 -->73
+ELEVATETO 74 # W  73 -->74
+ELEVATETO 75 # E  74 -->75
+ELEVATETO 76 # W  75 -->76
+ELEVATETO 77 # E  76 -->77
+ELEVATETO 78 # W  77 -->78
+ELEVATETO 79 # E  78 -->79
+ELEVATETO 80 # W  79 -->80
+ELEVATETO 81 # E  80 -->81
+ELEVATETO 82 # W  81 -->82
+ELEVATETO 83 # E  82 -->83
+ELEVATETO 84 # W  83 -->84
+ELEVATETO 85 # E  84 -->85
+ELEVATETO 86 # W  85 -->86
+ELEVATETO 87 # E  86 -->87
+ELEVATETO 88 # W  87 -->88
+ELEVATETO 89 # E  88 -->89
+ELEVATETO 90 # W  89 -->90
+ELEVATETO 91 # E  90 -->91
+ELEVATETO 92 # W  91 -->92
+ELEVATETO 93 # E  92 -->93
+ELEVATETO 94 # W  93 -->94
+ELEVATETO 95 # E  94 -->95
+ELEVATETO 96 # W  95 -->96
+ELEVATETO 97 # E  96 -->97
+ELEVATETO 98 # W  97 -->98
+ELEVATETO 99 # E  98 -->99
+# now go downstairs
+ELEVATETO 90 # W 99 -->90
+ELEVATETO 80 # E 90 -->80
+ELEVATETO 70 # W 80 -->70
+ELEVATETO 60 # E 70 -->60
+ELEVATETO 50 # W 60 -->50
+ELEVATETO 40 # E 50 -->40
+ELEVATETO 30 # W 40 -->30
+ELEVATETO 20 # E 30 -->20
+ELEVATETO 10 # W 20 -->10
+ELEVATETO  0 # E 10 --> 0
+# now go upstairs again
+ELEVATETO  1  # W   0 -->  1
+ELEVATETO  2  # E   1 -->  2
+ELEVATETO  3  # W   2 -->  3
+ELEVATETO  4  # E   3 -->  4
+ELEVATETO  5  # W   4 -->  5
+ELEVATETO  6  # E   5 -->  6
+ELEVATETO  7  # W   6 -->  7
+ELEVATETO  8  # E   7 -->  8
+ELEVATETO  9  # W   8 -->  9
+ELEVATETO 10  # E   9 --> 10
+ELEVATETO 11  # W  10 --> 11
+ELEVATETO 12  # E  11 --> 12
+ELEVATETO 13  # W  12 --> 13
+ELEVATETO 14  # E  13 --> 14
+ELEVATETO 15  # W  14 --> 15
+ELEVATETO 16  # E  15 --> 16
+ELEVATETO 17  # W  16 --> 17
+ELEVATETO 18  # E  17 --> 18
+ELEVATETO 19  # W  18 --> 19
+ELEVATETO 20  # E  19 --> 20
+ELEVATETO 21  # W  20 --> 21
+ELEVATETO 22  # E  21 --> 22
+ELEVATETO 23  # W  22 --> 23
+ELEVATETO 24  # E  23 --> 24
+ELEVATETO 25  # W  24 --> 25
+ELEVATETO 26  # E  25 --> 26
+ELEVATETO 27  # W  26 --> 27
+ELEVATETO 28  # E  27 --> 28
+ELEVATETO 29  # W  28 --> 29
+ELEVATETO 30  # E  29 --> 30
+ELEVATETO 31  # W  30 --> 31
+ELEVATETO 32  # E  31 --> 32
+ELEVATETO 33  # W  32 --> 33
+ELEVATETO 34  # E  33 --> 34
+ELEVATETO 35  # W  34 --> 35
+ELEVATETO 36  # E  35 --> 36
+ELEVATETO 37  # W  36 --> 37
+ELEVATETO 38  # E  37 --> 38
+ELEVATETO 39  # W  38 --> 39
+ELEVATETO 40  # E  39 --> 40
+ELEVATETO 31  # W  30 --> 31
+ELEVATETO 32  # E  31 --> 32
+ELEVATETO 33  # W  32 --> 33
+ELEVATETO 34  # E  33 --> 34
+ELEVATETO 35  # W  34 --> 35
+ELEVATETO 36  # E  35 --> 36
+ELEVATETO 37  # W  36 --> 37
+ELEVATETO 38  # E  37 --> 38
+ELEVATETO 39  # W  38 --> 39
+ELEVATETO 40  # E  39 --> 40
+ELEVATETO 41  # W  40 --> 41
+ELEVATETO 42  # E  41 --> 42
+ELEVATETO 43  # W  42 --> 43
+ELEVATETO 44  # E  43 --> 44
+ELEVATETO 45  # W  44 --> 45
+ELEVATETO 46  # E  45 --> 46
+ELEVATETO 47  # W  46 --> 47
+ELEVATETO 48  # E  47 --> 48
+ELEVATETO 49  # W  48 --> 49
+ELEVATETO 50  # E  49 --> 50
+ELEVATETO 51  # W  50 --> 51
+ELEVATETO 52  # E  51 --> 52
+ELEVATETO 53  # W  52 --> 53
+ELEVATETO 54  # E  53 --> 54
+ELEVATETO 55  # W  54 --> 55
+ELEVATETO 56  # E  55 --> 56
+ELEVATETO 57  # W  56 --> 57
+ELEVATETO 58  # E  57 --> 58
+ELEVATETO 59  # W  58 --> 59
+ELEVATETO 60  # E  59 --> 60
+ELEVATETO 61  # W  60 --> 61
+ELEVATETO 62  # E  61 --> 62
+ELEVATETO 63  # W  62 --> 63
+ELEVATETO 64  # E  63 --> 64
+ELEVATETO 65  # W  64 --> 65
+ELEVATETO 66  # E  65 --> 66
+ELEVATETO 67  # W  66 --> 67
+ELEVATETO 68  # E  67 --> 68
+ELEVATETO 69  # W  68 --> 69
+ELEVATETO 70  # E  69 --> 70
+ELEVATETO 71  # W  70 --> 71
+ELEVATETO 72  # E  71 --> 72
+ELEVATETO 73  # W  72 --> 73
+ELEVATETO 74  # E  73 --> 74
+ELEVATETO 75  # W  74 --> 75
+ELEVATETO 76  # E  75 --> 76
+ELEVATETO 77  # W  76 --> 77
+ELEVATETO 78  # E  77 --> 78
+ELEVATETO 79  # W  78 --> 79
+ELEVATETO 80  # E  79 --> 80
+ELEVATETO 81  # W  80 --> 81
+ELEVATETO 82  # E  81 --> 82
+ELEVATETO 83  # W  82 --> 83
+ELEVATETO 84  # E  83 --> 84
+ELEVATETO 85  # W  84 --> 85
+ELEVATETO 86  # E  85 --> 86
+ELEVATETO 87  # W  86 --> 87
+ELEVATETO 88  # E  87 --> 88
+ELEVATETO 89  # W  88 --> 89
+ELEVATETO 90  # E  89 --> 90
+ELEVATETO 91  # W  90 --> 91
+ELEVATETO 92  # E  91 --> 92
+ELEVATETO 93  # W  92 --> 93
+ELEVATETO 94  # E  93 --> 94
+ELEVATETO 95  # W  94 --> 95
+ELEVATETO 96  # E  95 --> 96
+ELEVATETO 97  # W  96 --> 97
+ELEVATETO 98  # E  97 --> 98
+ELEVATETO 99  # W  98 --> 99
+ELEVATETO  1  # E  99 -->  1
+ELEVATETO   0 # W 100 -->  0
+# leave
+
+#leave tower 4 - go to start
+
+# close several loops

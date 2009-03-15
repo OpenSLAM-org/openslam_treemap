@@ -1,0 +1,80 @@
+/*! \mainpage slamsimulator Package
+    \author Udo Frese
+
+   The slamsimulator package provides a simulator for 2D landmark
+   based SLAM. The first contribution is on providing an easy way for
+   a realistic topology including an irregular path travelled by
+   the robot and walls that occlude landmarks. This is done by specifying
+   a bitmap, where walls, the robot path and landmarks are simply drawn.
+
+   The second contribution is to allows simulations with an extreme
+   number of landmarks, for exmaple a million. This simulator has been
+   used in Frese, Schroeder, Closing a million landmarks loop. To do
+   this, the user can create a multi-story building with a
+   configuration file that defines a bitmap for each story (different
+   stories can share a bitmap). Each bitmap defines "elevators" and
+   in the config file a sequence of elevator transitions between stories
+   is defined. This way the user can easily generate simulation datasets
+   with a million landmarks.
+
+   The simulator provides very rudimentary support for generating 3D
+   measurements. In this case the landmarks have a Z coordinate
+   derived from their index in some deterministic random scheme. The
+   robot makes the primary planar motion as in the 2D case overlayed
+   with a random 6-DOF transform to make the motion full 3D. Note,
+   that in the 3D case currently no odometry is supported.
+
+   \section Examples
+
+   As an example we have added the million-landmarks dataset from the
+   paper.
+
+   \sa U. Frese, L. Schroeder, Closing a Million-Landmarks Loop,
+       Proceedings of the IEEE/RSJ International Conference on 
+       Intelligent Robots and Systems, Beijing, 2006
+
+   http://www.informatik.uni-bremen.de/agbkb/publikationen/bibsearch/detail_e.htm?pk_int=1991   
+
+   And the 100K landmarks data-set used for 3D simulation
+
+   \sa U. Frese, Efficient 6-DOF SLAM with Treemap as a Generic Backend
+       Proceedings of the Internation Conference on Robotics and Automation, Rome, 2007
+
+       http://www.informatik.uni-bremen.de/agbkb/publikationen/bibsearch/detail_e.htm?pk_int=2263
+
+
+
+   \section License
+
+Copyright (c) 2009, Universitaet Bremen
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+
+    * Redistributions in binary form must reproduce the above
+      copyright notice, this list of conditions and the following
+      disclaimer in the documentation and/or other materials provided
+      with the distribution.
+
+    * Neither the name of the Universitaet Bremen nor the names of its
+      contributors may be used to endorse or promote products derived
+      from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+*/

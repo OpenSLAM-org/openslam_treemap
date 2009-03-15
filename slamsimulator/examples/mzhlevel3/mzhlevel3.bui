@@ -1,0 +1,42 @@
+# This building is an example of a realistic topology. The floorplan
+# is taken from level 3 of the MZH building at Universitaet Bremen.
+# This config file defines one round trip trough the level.
+
+#************ Robot and Sensor ***
+# ODOMETRY <bias> <sigma> <radius>
+# Odometry error with no bias and 5mm/sqrt(m) noise with a robot radius of 0.3m
+ODOMETRY 0 0.005 0.3
+
+# ASSUMECOVARIANCESCALE <scaleOdo> <scaleLandmark> 
+# Pass the same covariance used for simulation to the algorithm (both odometry and landmarks)
+ASSUMECOVARIANCESCALE 1 1
+
+# SENSOR <fieldOfView> <maxDistance> <observationProb>
+# 180 degree field of view, 3m range
+SENSOR 180 3 1
+
+#SENSORNOISE <angleSigma0> <angleSigma1> <angleSigma2> <distSigma0> <distSigma1> <distSigma2>  <distBias>
+# constant angular error of 3 degree (rms), distance error of 2%
+# A distance bias of 0 m/deg
+SENSORNOISE 3 0 0 0 0.02 0 0
+ACTIVATENOISE 1
+
+
+#*********** Environment ******
+
+#SCALE <length>
+#1 pixel corresponds to 0,25m
+SCALE 0.25
+
+#STORY <nr> <filename>   Defines story number <nr> with bitmap <filename>
+#define story 0 as in building.ppm
+STORY 0 mzhlevel3.ppm
+#STORY 0 verysimplebuilding.ppm
+
+# The sequence of which level to visit when.
+#ELEVATETO <nr>  When reaching an elevator go to story number <nr>
+# when finding an elevator go to story 0.
+
+# Story 0
+ELEVATETO 0 # W-elevator
+# E-elevator
